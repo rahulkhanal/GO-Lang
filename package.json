@@ -2,14 +2,13 @@
   "name": "exploring",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
   "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "babel": "babel src --out-dir dist --watch --verbose",
-    "nodemon": "nodemon dist/app.js",
+    "babel": "babel src --out-dir dist --watch --verbose && sleep 2",
     "build": "babel src --out-dir dist",
-    "dev": "concurrently \"npm:babel\" \"npm:nodemon\"",
+    "live": "nodemon dist/app.js",
+    "dev:live": "rm -rf dist && sleep 2 && concurrently \"npm:babel\" \"npm:live\"",
     "start": "node dist/app.js"
   },
   "keywords": [],
@@ -17,7 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "reflect-metadata": "^0.2.1",
+    "reflect-metadata": "^0.2.1", 
     "tsyringe": "^4.8.0"
   },
   "devDependencies": {
