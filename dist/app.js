@@ -1,5 +1,6 @@
 "use strict";
 
+require("reflect-metadata");
 var _express = _interopRequireDefault(require("express"));
 var _routeDocorator = require("./project_modules/decorators/route-docorator");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }

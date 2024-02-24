@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import Express from "express";
 import { Get } from "./project_modules/decorators/route-docorator";
 const app = Express();
