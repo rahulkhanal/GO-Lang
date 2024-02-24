@@ -1,12 +1,12 @@
 import "reflect-metadata";
 import Express from "express";
-import { Get } from "./project_modules/decorators/route-docorator";
+import { Get } from "./@project_modules/decorators";
 const app = Express();
 
-// console.log(Get);
+console.log(Get);
 app.listen(3000, (err, resp) => {
   if (err) {
-    throw err;
+    throw err; 
   } else {
     console.log("Server started")
   }

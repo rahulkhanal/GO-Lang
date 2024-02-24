@@ -1,6 +1,6 @@
 const { container } = require("tsyringe");
 
-export function Get(route) {
+export function GetRouteDecorator(route) {
   return function (target, key, descriptor) {
     const router = container.resolve("Router");
     router.get(route, descriptor.value);

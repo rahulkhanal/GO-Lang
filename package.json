@@ -6,7 +6,12 @@
   "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel src --out-dir dist --watch --verbose & nodemon dist/app.js"
+    "babel": "babel src --out-dir dist --watch --verbose",
+    "nodemon": "nodemon dist/app.js",
+    "remove-dist": "rm -rf dist",
+    "build": "babel src --out-dir dist",
+    "dev": "concurrently \"npm:babel\" \"npm:nodemon\"",
+    "start": "node dist/app.js"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +26,7 @@
     "@babel/core": "^7.23.9",
     "@babel/plugin-proposal-decorators": "^7.23.9",
     "@babel/plugin-transform-class-properties": "^7.23.3",
-    "@babel/preset-env": "^7.23.9"
+    "@babel/preset-env": "^7.23.9",
+    "concurrently": "^8.2.2"
   }
 }
