@@ -1,11 +1,8 @@
 const { injectable } = require("tsyringe");
-// const {
-//   Get,
-//   Post,
-// } = require("../../project_modules/decorators/route-docorator");
+const { Get, Post } = require("../@project_modules/decorators");
 
 @injectable()
-class ProductController {
+export default class ProductController {
   constructor() {}
 
   @Get("/products")
@@ -18,5 +15,3 @@ class ProductController {
     res.send("POST request to /products");
   }
 }
-
-module.exports = ProductController;

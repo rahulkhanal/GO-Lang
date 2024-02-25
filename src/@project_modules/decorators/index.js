@@ -1,3 +1,6 @@
-import { GetRouteDecorator as Get } from "./route-docorator";
+import {
+  GetRouteDecorator as Get,
+  PostRouteDecorator as Post,
+} from "./route-docorator";
 
-export { Get };
+export { Get, Post };

@@ -1,16 +1,19 @@
 import "reflect-metadata";
 import Express from "express";
 import { container } from 'tsyringe';
+// import Router from "./@project_modules/routes/routes";
 import ProductController from "./controller/product-controller";
-import RouterSetup from "./@project_modules/routes/router-setup"
-import { router } from "./@project_modules/decorators/route-docorator";
+import Router from "./@project_modules/routes/routes";
+
 
 const app = Express()
 
-container.register('ProductController', { useClass: ProductController });
+// container.register('Router', { useClass: Router });
 const productController = container.resolve(ProductController);
+// const router = container.resolve('Router');
 
 router.getRouter().use('/', productController.getProduct);
+// router.getRouter().use('/', productController.addProduct);
 
 app.use(router.getRouter());
 

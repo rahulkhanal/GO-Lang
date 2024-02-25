@@ -1,6 +1,6 @@
-const express = require("express");
+import express from "express";
 
-class Router {
+export default class RouterSetup {
   constructor() {
     this.router = express.Router();
   }
@@ -17,5 +17,3 @@ class Router {
     return this.router;
   }
 }
-
-module.exports = Router;
