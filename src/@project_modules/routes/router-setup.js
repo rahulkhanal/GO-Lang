@@ -17,3 +17,4 @@ export default class RouterSetup {
     return this.router;
   }
 }
+
