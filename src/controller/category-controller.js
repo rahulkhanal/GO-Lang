@@ -1,5 +1,5 @@
 const { injectable } = require("tsyringe");
-const { Get, Post } = require("../@project_modules/decorators/HTTP");
+const { Get, Post } = require("../@rahul_modules/decorators/HTTP");
 
 @injectable()
 export default class CategoryController {
